@@ -1,0 +1,4 @@
+data/passwords.csv
+
+__pycache__/
+*.pyc
