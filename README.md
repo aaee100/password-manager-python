@@ -50,7 +50,6 @@ No external packages are required.
 ```text
 password-manager-python/
 ├── password_manager.py
-├── data/
 ├── screenshots/
 │   └── main-window.png
 ├── requirements.txt
