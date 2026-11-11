@@ -85,14 +85,19 @@ Use only fake credentials when testing or taking screenshots for the GitHub repo
 
 ## Data Storage
 
-Password entries are stored locally in:
+Password entries are stored locally in `data/passwords.csv`.
 
-```text
-data/passwords.csv
-```
+Each record contains:
+- **ID** – a unique identifier for the entry.
+- **Website** – the associated website.
+- **Username** – the account username.
+- **Password** – the obfuscated password.
 
-The CSV file is intentionally excluded from Git using `.gitignore` so that stored credentials are not uploaded to GitHub.
+The application uses unique IDs to identify individual records, allowing users to delete one entry without accidentally deleting identical duplicates.
 
+Existing CSV files using the previous format are automatically upgraded when the application starts.
+
+**Note:** Passwords are stored using simple character shifting for demonstration purposes. This is not secure encryption. Do not use real passwords with this application.
 ## How It Works
 
 The application:
